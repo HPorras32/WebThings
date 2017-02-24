@@ -1,0 +1,143 @@
+﻿/*
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/ Set padding to keep content from hitting the edges /
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/ Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/ Set width on the form input elements since they're 100% wide by default /
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+*/
+
+body
+{
+  background-color: #EEEEEE; /*Para que el fondo no sea del todo blanco. TEMPORAL, en espera de confirmación.*/
+	padding-top:70px; /* Necesario por la barra de navegación fija superior. */
+}
+
+#up {
+        width: auto;
+        height: 100%;
+        background-color: #ffffff; 
+        float: center;
+}
+
+#down {
+        width: auto;
+        height: 100%;
+        background-color: #ffffff; 
+        float: center;
+}
+
+#titulo
+{
+	padding: 0px; /* Para dejar espacio para los tiles en la parte inferior */
+	/*color: #FFFFFF;*/
+}
+
+@media screen and (min-width:768px) {
+	#titulo h1
+	{
+		/*text-shadow: 0px 2px 5px #000000;*/
+
+		text-shadow: -130px -40px 0px #FCC, /* rojo     */
+								 -130px  -7px 0px #CFC, /* verde    */
+								 -130px  26px 0px #CCF, /* azul     */
+									130px -23px 0px #FFC, /* amarillo */
+									130px  10px 0px #CFF, /* cyan     */
+									130px  43px 0px #FCF, /* morado   */
+									130px -56px 0px #CCC, /* gris     */
+								 -130px  59px 0px #FFF  /* blanco   */
+								;
+	}
+}
+
+@media screen and (max-width:767px) {
+	#titulo h1
+	{
+		/*text-shadow: 0px 2px 5px #000000;*/
+
+		text-shadow: -75px -40px 0px #FCC, /* rojo     */
+								 -75px  -7px 0px #CFC, /* verde    */
+								 -75px  26px 0px #CCF, /* azul     */
+									75px -23px 0px #FFC, /* amarillo */
+									75px  10px 0px #CFF, /* cyan     */
+									75px  43px 0px #FCF, /* morado   */
+									75px -56px 0px #CCC, /* gris     */
+								 -75px  59px 0px #FFF  /* blanco   */
+								;
+	}
+}
+
+
+#titulo h3
+{
+	text-shadow: 2px 2px 3px #AAAAAA;
+}
+
+nav a
+{
+	border-width: 0 0 2px 0; /* Borde inferior de 2px de ancho, estilo sólido (contínuo), color transparente */
+	border-style: solid;
+	border-color: transparent;
+	border-radius: 10px; /* Esquinas redondeadas de 10px */
+	transition: .2s all; /*Efecto de transición de 0.2s de duración, en todos las propiedades que tienen cambios, como color de borde, padding, etc...*/
+	-moz-transition: .2s all;
+	-o-transition: .2s all;
+	-webkit-transition: .2s all;
+}
+
+nav li.active a
+{
+	border-color: #00FF00;
+}
+
+nav a:not(.navbar-brand):hover /*Cuando se posa el mouse sobre un enlace en la barra de navegación, que no son el logo de la página */
+{
+	border-color: #FFFF00;
+}
+
+@media (max-width: 767px) {
+	/*Estos estilos se aplican cuando el ancho de la página es de hasta 767px*/
+	nav a:not(.navbar-brand) /*Borde superior e inferior de 1px de ancho, y de 0px en los lados, en los enlaces de la barra de navegación que no son el logo de la página*/
+	{
+		border-width:1px 0;
+	}
+
+	nav a:not(.navbar-brand):hover /*Cuando se posa el mouse en el enlace, o se pasa el dedo por la pantalla en smartphones/tablets? */
+	{
+		padding-left: 30px;
+	}
+}
+
+::selection
+{
+	background-color:rgba(0, 255, 0, 0.5);
+	color: #000000;
+}
+
+#titulo h1::selection
+{
+	background-color:transparent;
+}
+
+#titulo h3::selection
+{
+	color: #FFFFFF !important;
+}
